@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Impostor" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Impostor — Facilitador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0f;
+      --surface: #16161a;
+      --surface2: #1e1e24;
+      --border: #2a2a35;
+      --accent: #e8ff5a;
+      --accent2: #ff5a8a;
+      --text: #f0f0f5;
+      --muted: #6b6b80;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── SCREENS ── */
+    .screen { display: none; }
+    .screen.active { display: flex; flex-direction: column; min-height: 100dvh; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+    .screen.active { animation: fadeUp .25s ease; }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -.03em; }
+    .logo span { color: var(--accent); }
+    .badge-lider {
+      background: var(--accent); color: #000;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 7px; border-radius: 4px;
+      font-family: 'DM Mono', monospace;
+    }
+    .header-actions { margin-left: auto; display: flex; gap: .4rem; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+      padding: .6rem 1.1rem; border-radius: 10px;
+      font-size: .85rem; font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      cursor: pointer; border: none;
+      transition: all .15s; letter-spacing: .01em;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active { transform: scale(.96); }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary:active { background: #d0e840; }
+    .btn-ghost {
+      background: transparent; color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:active { color: var(--text); border-color: var(--muted); }
+    .btn-danger {
+      background: transparent; color: #ff5a5a;
+      border: 1px solid #3a1a1a;
+      font-size: .72rem; padding: .3rem .55rem; border-radius: 7px;
+    }
+    .btn-block { width: 100%; padding: .8rem; font-size: .9rem; border-radius: 12px; }
+    .btn:disabled { opacity: .35; pointer-events: none; }
+
+    /* ── CONTENT ── */
+    .content { padding: 1.25rem; flex: 1; }
+
+    .section-title {
+      font-size: 10px; font-weight: 700; letter-spacing: .13em;
+      color: var(--muted); text-transform: uppercase; margin-bottom: .65rem;
+    }
+
+    .divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
+
+    /* ── STEPS ── */
+    .step-indicator { display: flex; gap: 4px; margin-bottom: 1.25rem; }
+    .step { height: 3px; flex: 1; border-radius: 2px; background: var(--border); transition: background .3s; }
+    .step.done { background: var(--accent); }
+    .step.active { background: var(--accent); opacity: .45; }
+
+    /* ── INPUTS ── */
+    .input-row { display: flex; gap: .5rem; margin-bottom: .65rem; }
+    input[type="text"] {
+      flex: 1; background: var(--surface2);
+      border: 1px solid var(--border); color: var(--text);
+      padding: .6rem .9rem; border-radius: 10px;
+      font-family: 'Syne', sans-serif; font-size: .9rem; outline: none;
+      -webkit-appearance: none;
+    }
+    input[type="text"]:focus { border-color: var(--accent); }
+    input[type="text"]::placeholder { color: var(--muted); }
+
+    /* ── PLAYER LIST ── */
+    .player-list { display: flex; flex-direction: column; gap: .4rem; margin-bottom: .65rem; }
+    .player-chip {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: .45rem .75rem;
+    }
+    .player-chip-left { display: flex; align-items: center; gap: .5rem; }
+    .player-num {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--border); font-size: .62rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Mono', monospace; color: var(--muted); flex-shrink: 0;
+    }
+    .counter { font-size: .78rem; color: var(--muted); font-family: 'DM Mono', monospace; margin-bottom: .9rem; }
+
+    /* ── THEME GRID ── */
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: .45rem; margin-bottom: .75rem;
+    }
+    .theme-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: .6rem .5rem;
+      cursor: pointer; transition: all .15s; text-align: center;
+    }
+    .theme-card:active { transform: scale(.96); }
+    .theme-card.selected { border-color: var(--accent); background: rgba(232,255,90,.08); color: var(--accent); }
+    .theme-card .t-icon { font-size: 1.25rem; margin-bottom: .2rem; }
+    .theme-card .t-name { font-size: .72rem; font-weight: 700; }
+
+    /* ── ALERT ── */
+    .alert-pop {
+      background: rgba(232,255,90,.07); border: 1px solid rgba(232,255,90,.25);
+      border-radius: 8px; padding: .55rem .85rem;
+      font-size: .8rem; color: var(--accent); margin-bottom: .5rem; display: none;
+    }
+
+    /* ── PASS SCREEN ── */
+    .pass-wrap {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    .pass-icon { font-size: 4.5rem; margin-bottom: 1.5rem; animation: bob 2s ease-in-out infinite; }
+    @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .pass-label { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--muted); text-transform: uppercase; margin-bottom: .5rem; }
+    .pass-name { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; margin-bottom: .5rem; line-height: 1.1; }
+    .pass-sub { font-size: .82rem; color: var(--muted); margin-bottom: 2.5rem; max-width: 280px; line-height: 1.5; }
+
+    /* ── PROGRESS DOTS ── */
+    .progress-dots { display: flex; gap: 6px; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: all .3s; }
+    .dot.done { background: var(--muted); }
+    .dot.current { background: var(--accent); width: 24px; border-radius: 4px; }
+
+    /* ── CARD SCREEN ── */
+    .card-wrap {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; padding: 1.5rem;
+    }
+    .player-announce { text-align: center; margin-bottom: 1.5rem; }
+    .player-announce .vez { font-size: .72rem; font-weight: 700; letter-spacing: .15em; color: var(--muted); text-transform: uppercase; margin-bottom: .35rem; }
+    .player-announce .nome { font-size: 1.9rem; font-weight: 800; letter-spacing: -.03em; }
+    .player-announce .instrucao { font-size: .8rem; color: var(--muted); margin-top: .3rem; }
+
+    .card-container {
+      perspective: 1000px;
+      width: min(260px, 80vw);
+      height: min(340px, 52vw + 100px);
+      cursor: pointer; margin-bottom: 2rem; flex-shrink: 0;
+    }
+    .card-inner {
+      width: 100%; height: 100%; position: relative;
+      transform-style: preserve-3d;
+      transition: transform .6s cubic-bezier(.4,0,.2,1);
+    }
+    .card-inner.flipped { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute; width: 100%; height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 1.5rem;
+    }
+    .card-back {
+      background: var(--surface2); border: 2px solid var(--border);
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.015) 0, rgba(255,255,255,.015) 1px, transparent 0, transparent 50%);
+      background-size: 10px 10px;
+    }
+    .card-back .card-logo { font-size: 3.5rem; margin-bottom: .75rem; opacity: .35; }
+    .card-back .card-tap { font-size: .78rem; font-weight: 700; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; }
+    .tap-anim {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 2px solid var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1rem; animation: pulse 1.5s ease-in-out infinite; opacity: .5;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.1);opacity:.8} }
+
+    .card-front-player { background: linear-gradient(145deg, #1a2a0d, #0f1a08); border: 2px solid var(--accent); }
+    .card-front-impostor { background: linear-gradient(145deg, #2a0d1a, #1a0810); border: 2px solid var(--accent2); }
+
+    .card-role {
+      font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      margin-bottom: .75rem; padding: .3rem .8rem; border-radius: 20px;
+    }
+    .role-player { background: rgba(232,255,90,.15); color: var(--accent); }
+    .role-impostor { background: rgba(255,90,138,.15); color: var(--accent2); }
+
+    .card-word-label { font-size: .62rem; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; margin-bottom: .3rem; }
+    .card-word { font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; text-align: center; line-height: 1.1; }
+    .card-word.player-word { color: var(--accent); }
+    .card-word.impostor-hint { color: var(--accent2); font-size: 1.1rem; line-height: 1.4; }
+    .card-icon { font-size: 2.75rem; margin-bottom: .75rem; }
+
+    .memorized-btn { width: 100%; max-width: 320px; display: none; }
+    .memorized-btn.visible { display: flex; }
+
+    /* ── SUMMARY ── */
+    .leader-view {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px; padding: .9rem 1rem; margin-bottom: 1rem;
+    }
+    .leader-row {
+      display: flex; align-items: center; gap: .5rem;
+      padding: .45rem 0; border-bottom: 1px solid var(--border);
+    }
+    .leader-row:last-child { border-bottom: none; }
+    .lbadge { font-size: .62rem; font-weight: 700; padding: .15rem .45rem; border-radius: 4px; font-family: 'DM Mono', monospace; flex-shrink: 0; }
+    .lbadge-p { background: rgba(232,255,90,.15); color: var(--accent); border: 1px solid rgba(232,255,90,.3); }
+    .lbadge-i { background: rgba(255,90,138,.15); color: var(--accent2); border: 1px solid rgba(255,90,138,.3); }
+    .lword { font-family: 'DM Mono', monospace; font-size: .75rem; color: var(--muted); margin-left: auto; text-align: right; }
+
+    .hint-box {
+      background: rgba(255,90,138,.05); border: 1px dashed rgba(255,90,138,.4);
+      border-radius: 10px; padding: .85rem 1rem; margin-bottom: 1rem;
+    }
+    .hint-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; color: var(--accent2); text-transform: uppercase; margin-bottom: .3rem; }
+    .hint-text { font-family: 'DM Mono', monospace; font-size: .82rem; line-height: 1.5; }
+
+    /* ── HISTORY ── */
+    .hist-item {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: .75rem 1rem; margin-bottom: .45rem;
+    }
+    .hist-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: .25rem; }
+    .hist-theme { font-size: .85rem; font-weight: 700; }
+    .hist-date { font-size: .68rem; font-family: 'DM Mono', monospace; color: var(--muted); }
+    .hist-detail { font-size: .75rem; color: var(--muted); line-height: 1.4; }
+    .history-empty { text-align: center; color: var(--muted); font-size: .85rem; padding: 3rem 0; }
+
+    /* ── PWA INSTALL BANNER ── */
+    #installBanner {
+      display: none; position: fixed; bottom: 1rem; left: 1rem; right: 1rem;
+      background: var(--surface2); border: 1px solid var(--accent);
+      border-radius: 14px; padding: 1rem 1.1rem;
+      z-index: 100; gap: .75rem; align-items: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,.5);
+    }
+    #installBanner.show { display: flex; }
+    #installBanner .ib-text { flex: 1; font-size: .82rem; line-height: 1.4; color: var(--text); }
+    #installBanner .ib-text strong { color: var(--accent); }
+
+    /* ── SAFE AREA (notch / home indicator) ── */
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0); }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 1: SETUP
+  ════════════════════════════════════════ -->
+  <div id="tab-setup" class="screen active">
+    <div class="header">
+      <div class="logo">IMPOS<span>T</span>OR</div>
+      <div class="badge-lider">LÍDER</div>
+      <div class="header-actions">
+        <button class="btn btn-ghost" style="font-size:.75rem;padding:.4rem .7rem" onclick="goHistory()">Histórico</button>
+      </div>
+    </div>
+
+    <div class="content safe-bottom">
+      <div class="step-indicator">
+        <div class="step done" id="s1"></div>
+        <div class="step" id="s2"></div>
+        <div class="step" id="s3"></div>
+      </div>
+
+      <div class="section-title">Jogadores (mínimo 3)</div>
+      <div class="input-row">
+        <input type="text" id="playerInput" placeholder="Nome do jogador..." maxlength="20"
+          onkeydown="if(event.key==='Enter')addPlayer()" autocomplete="off" autocorrect="off" />
+        <button class="btn btn-primary" onclick="addPlayer()">+ Add</button>
+      </div>
+      <div id="alertPop" class="alert-pop"></div>
+      <div id="counterText" class="counter">0 / 10 jogadores</div>
+      <div class="player-list" id="playerList"></div>
+
+      <div class="divider"></div>
+      <div class="section-title">Tema da rodada</div>
+      <div class="theme-grid" id="themeGrid"></div>
+      <button class="btn btn-ghost btn-block" onclick="randomTheme()" style="margin-bottom:.5rem">🎲 Sortear tema aleatório</button>
+
+      <div class="divider"></div>
+      <button class="btn btn-primary btn-block" id="startBtn" onclick="startRound()" disabled>
+        ▶ Iniciar rodada — passar o celular
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 2: PASS (entre cada jogador)
+  ════════════════════════════════════════ -->
+  <div id="tab-pass" class="screen">
+    <div class="header">
+      <div class="logo">IMPOS<span>T</span>OR</div>
+      <div class="progress-dots" id="progressDots" style="margin:0 0 0 auto"></div>
+    </div>
+    <div class="pass-wrap safe-bottom">
+      <div class="pass-icon">📱</div>
+      <div class="pass-label">Passe o celular para</div>
+      <div class="pass-name" id="passName">—</div>
+      <div class="pass-sub">Quando essa pessoa estiver segurando o celular, ela toca o botão abaixo</div>
+      <button class="btn btn-primary btn-block" style="max-width:320px" onclick="goToCard()">
+        Estou com o celular →
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 3: CARD REVEAL
+  ════════════════════════════════════════ -->
+  <div id="tab-card" class="screen">
+    <div class="header">
+      <div class="logo">IMPOS<span>T</span>OR</div>
+    </div>
+    <div class="card-wrap safe-bottom">
+      <div class="player-announce">
+        <div class="vez">Vez de</div>
+        <div class="nome" id="cardName">—</div>
+        <div class="instrucao">Toque na carta para revelar sua função</div>
+      </div>
+
+      <div class="card-container" id="cardContainer" onclick="flipCard()">
+        <div class="card-inner" id="cardInner">
+          <div class="card-face card-back">
+            <div class="card-logo">🃏</div>
+            <div class="card-tap">Toque para revelar</div>
+            <div class="tap-anim">👆</div>
+          </div>
+          <div class="card-face" id="cardFront" style="transform:rotateY(180deg)"></div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block memorized-btn" id="memorizedBtn" onclick="onMemorized()">
+        Memorizei — passar o celular
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 4: LEADER SUMMARY
+  ════════════════════════════════════════ -->
+  <div id="tab-summary" class="screen">
+    <div class="header">
+      <div class="logo">IMPOS<span>T</span>OR</div>
+      <div class="badge-lider">LÍDER</div>
+    </div>
+    <div class="content safe-bottom">
+      <div class="section-title">Resumo da rodada — só o líder vê</div>
+      <div class="leader-view" id="leaderView"></div>
+      <div class="hint-box">
+        <div class="hint-label">🔴 Dica do impostor</div>
+        <div class="hint-text" id="hintFull"></div>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="startRound()" style="margin-bottom:.5rem">
+        🔄 Nova rodada (mesmos jogadores)
+      </button>
+      <button class="btn btn-ghost btn-block" onclick="goSetup()">
+        ⚙ Alterar jogadores / tema
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 5: HISTORY
+  ════════════════════════════════════════ -->
+  <div id="tab-history" class="screen">
+    <div class="header">
+      <div class="logo">IMPOS<span>T</span>OR</div>
+      <div class="header-actions">
+        <button class="btn btn-ghost" style="font-size:.75rem;padding:.4rem .7rem" onclick="goSetup()">← Voltar</button>
+      </div>
+    </div>
+    <div class="content safe-bottom">
+      <div class="section-title">Histórico de rodadas</div>
+      <div id="historyList"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PWA INSTALL BANNER
+  ════════════════════════════════════════ -->
+  <div id="installBanner">
+    <div class="ib-text">
+      <strong>Instalar app</strong><br>
+      Adicione à tela inicial para usar offline!
+    </div>
+    <button class="btn btn-primary" style="flex-shrink:0" onclick="installPWA()">Instalar</button>
+    <button class="btn btn-ghost" style="flex-shrink:0;padding:.5rem .65rem" onclick="dismissInstall()">✕</button>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
