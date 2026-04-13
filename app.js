@@ -570,7 +570,7 @@ function renderSummary() {
     const isImp = i === r.impostorIdx;
     return `<div class="leader-row">
       <div class="player-num">${i + 1}</div>
-      <div style="flex:1;font-size:.85rem">${name}</div>
+      <div style="flex:1;font-size:.85rem">${none}</div>
       <span class="lbadge ${isImp ? 'lbadge-i' : 'lbadge-p'}">${isImp ? 'IMPOSTOR' : 'JOGADOR'}</span>
       <span class="lword">${isImp ? '(dica)' : r.word}</span>
     </div>`;
