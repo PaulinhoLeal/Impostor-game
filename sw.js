@@ -2,7 +2,7 @@
    IMPOSTOR — Service Worker
    Enables full offline support
 ════════════════════════════════════════════ */
-const CACHE = 'impostor-v1';
+const CACHE = 'impostor-v3';
 const ASSETS = [
   '/',
   '/index.html',
