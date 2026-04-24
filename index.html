@@ -272,6 +272,55 @@
     .hist-detail { font-size: .75rem; color: var(--muted); line-height: 1.4; }
     .history-empty { text-align: center; color: var(--muted); font-size: .85rem; padding: 3rem 0; }
 
+    /* ── OPTION ROWS ── */
+    .option-row {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px; padding: .75rem 1rem; margin-bottom: .5rem;
+      gap: 1rem;
+    }
+    .option-info { flex: 1; }
+    .option-label { font-size: .88rem; font-weight: 700; margin-bottom: .15rem; }
+    .option-sub { font-size: .72rem; color: var(--muted); line-height: 1.3; }
+
+    /* Toggle */
+    .toggle-btn {
+      width: 48px; height: 28px; border-radius: 14px;
+      background: var(--border); border: none; cursor: pointer;
+      position: relative; transition: background .2s; flex-shrink: 0;
+      padding: 0;
+    }
+    .toggle-btn.active { background: var(--accent); }
+    .toggle-knob {
+      width: 22px; height: 22px; border-radius: 50%; background: #fff;
+      position: absolute; top: 3px; left: 3px;
+      transition: transform .2s; box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
+    .toggle-btn.active .toggle-knob { transform: translateX(20px); }
+
+    /* Stepper */
+    .stepper { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
+    .stepper-btn {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); font-size: 1.1rem; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all .15s;
+    }
+    .stepper-btn:active { background: var(--accent); color: #000; border-color: var(--accent); }
+    .stepper-val {
+      font-size: 1.1rem; font-weight: 800; font-family: "DM Mono", monospace;
+      color: var(--accent); min-width: 20px; text-align: center;
+    }
+
+    /* Multi-impostor badge on card */
+    .card-impostor-num {
+      font-size: .65rem; font-weight: 700; font-family: "DM Mono", monospace;
+      background: rgba(255,90,138,.2); color: var(--accent2);
+      border: 1px solid rgba(255,90,138,.4);
+      padding: .15rem .5rem; border-radius: 6px; margin-top: .4rem;
+    }
+
     /* ── PWA INSTALL BANNER ── */
     #installBanner {
       display: none; position: fixed; bottom: 1rem; left: 1rem; right: 1rem;
@@ -323,6 +372,31 @@
       <div class="section-title">Tema da rodada</div>
       <div class="theme-grid" id="themeGrid"></div>
       <button class="btn btn-ghost btn-block" onclick="randomTheme()" style="margin-bottom:.5rem">🎲 Sortear tema aleatório</button>
+
+      <div class="divider"></div>
+      <div class="section-title">Opções da rodada</div>
+
+      <div class="option-row">
+        <div class="option-info">
+          <div class="option-label">Dica para o impostor</div>
+          <div class="option-sub">Impostor recebe uma palavra abstrata como pista</div>
+        </div>
+        <button class="toggle-btn active" id="hintToggle" onclick="toggleHint()">
+          <div class="toggle-knob"></div>
+        </button>
+      </div>
+
+      <div class="option-row">
+        <div class="option-info">
+          <div class="option-label">Número de impostores</div>
+          <div class="option-sub" id="impostorCountLabel">1 impostor por rodada</div>
+        </div>
+        <div class="stepper">
+          <button class="stepper-btn" onclick="changeImpostors(-1)">−</button>
+          <span class="stepper-val" id="impostorCount">1</span>
+          <button class="stepper-btn" onclick="changeImpostors(1)">+</button>
+        </div>
+      </div>
 
       <div class="divider"></div>
       <button class="btn btn-primary btn-block" id="startBtn" onclick="startRound()" disabled>
@@ -411,7 +485,7 @@
     <div class="content safe-bottom">
       <div class="section-title">Resumo da rodada — só o líder vê</div>
       <div class="leader-view" id="leaderView"></div>
-      <div class="hint-box">
+      <div class="hint-box" id="hintBox">
         <div class="hint-label">🔴 Dica do impostor</div>
         <div class="hint-text" id="hintFull"></div>
       </div>

@@ -5,392 +5,393 @@ const THEMES = {
   disney: {
     icon: '🏰', name: 'Disney',
     words: [
-      { w: 'Simba', h: 'Às vezes fugir parece mais fácil do que enfrentar o passado.' },
-      { w: 'Elsa', h: 'Tem gente que precisa se afastar pra não machucar quem ama.' },
-      { w: 'Cinderela', h: 'Mesmo quando tudo dá errado, ainda dá pra acreditar que pode melhorar.' },
-      { w: 'Ariel', h: 'Tem momentos em que a gente abre mão de tudo por curiosidade.' },
-      { w: 'Woody', h: 'Ser deixado de lado é difícil, mas lealdade ainda importa.' },
-      { w: 'Nemo', h: 'Mesmo pequeno, dá pra causar uma grande preocupação.' },
-      { w: 'Mulan', h: 'Às vezes a gente precisa fingir ser outra pessoa pra provar algo.' },
-      { w: 'Hércules', h: 'Ser forte não significa que você já é quem deveria ser.' },
-      { w: 'Tarzan', h: 'Crescer em um lugar diferente muda totalmente quem você é.' },
-      { w: 'Moana', h: 'Tem gente que sente um chamado que não consegue ignorar.' },
-      { w: 'Stitch', h: 'Mesmo sendo problemático, todo mundo precisa de um lugar pra chamar de casa.' },
-      { w: 'Dumbo', h: 'Aquilo que te zoam pode ser justamente o que te destaca.' },
-      { w: 'Bolt', h: 'Nem tudo que a gente acredita sobre si mesmo é real.' },
-      { w: 'Rapunzel', h: 'Viver preso faz a gente valorizar ainda mais a liberdade.' },
-      { w: 'Maléfica', h: 'Uma decepção pode transformar completamente alguém.' },
-      { w: 'Ursula', h: 'Sempre tem alguém disposto a fazer um acordo arriscado.' },
-      { w: 'Gênio', h: 'Ter muito poder não significa poder fazer tudo.' },
-      { w: 'Baloo', h: 'Às vezes viver sem preocupação é o melhor jeito de viver.' },
-      { w: 'Mowgli', h: 'Crescer fora do seu lugar de origem pode confundir quem você é.' },
-      { w: 'Merida', h: 'Nem todo mundo quer seguir o caminho que foi imposto.' },
-      { w: 'Tiana', h: 'Trabalhar duro nem sempre garante que tudo vai sair como planejado.' },
-      { w: 'Gaston', h: 'Tem gente que acha que merece tudo só por ser quem é.' },
-      { w: 'Scar', h: 'A inveja pode levar alguém a fazer coisas imperdoáveis.' },
-      { w: 'Jafar', h: 'Quem quer poder demais acaba mostrando quem realmente é.' },
-      { w: 'Cruella', h: 'Obsessão pode fazer alguém perder completamente o limite.' },
-      { w: 'Gepeto', h: 'Criar algo especial pode trazer consequências inesperadas.' },
-      { w: 'Fada Sininho', h: 'Ciúmes às vezes fazem a gente agir sem pensar.' },
-      { w: 'Megara', h: 'Nem sempre quem parece forte está realmente bem por dentro.' },
-      { w: 'Flynn Rider', h: 'Às vezes alguém muda completamente por causa de outra pessoa.' },
-      { w: 'Iago', h: 'Tem gente que só está por perto por interesse.' },
+      { w: 'Simba', h: 'passado' },
+      { w: 'Elsa', h: 'gelo' },
+      { w: 'Cinderela', h: 'esperança' },
+      { w: 'Ariel', h: 'curiosidade' },
+      { w: 'Woody', h: 'lealdade' },
+      { w: 'Nemo', h: 'tamanho' },
+      { w: 'Mulan', h: 'disfarce' },
+      { w: 'Hércules', h: 'força' },
+      { w: 'Tarzan', h: 'selvagem' },
+      { w: 'Moana', h: 'chamado' },
+      { w: 'Stitch', h: 'lar' },
+      { w: 'Dumbo', h: 'diferença' },
+      { w: 'Bolt', h: 'ilusão' },
+      { w: 'Rapunzel', h: 'prisão' },
+      { w: 'Maléfica', h: 'transformação' },
+      { w: 'Ursula', h: 'tentação' },
+      { w: 'Gênio', h: 'limitação' },
+      { w: 'Baloo', h: 'despreocupação' },
+      { w: 'Mowgli', h: 'identidade' },
+      { w: 'Merida', h: 'rebeldia' },
+      { w: 'Tiana', h: 'esforço' },
+      { w: 'Gaston', h: 'arrogância' },
+      { w: 'Scar', h: 'inveja' },
+      { w: 'Jafar', h: 'ambição' },
+      { w: 'Cruella', h: 'obsessão' },
+      { w: 'Gepeto', h: 'criação' },
+      { w: 'Fada Sininho', h: 'ciúme' },
+      { w: 'Megara', h: 'máscara' },
+      { w: 'Flynn Rider', h: 'mudança' },
+      { w: 'Iago', h: 'interesse' },
     ]
   },
   marvel: {
     icon: '⚡', name: 'Marvel',
     words: [
-      { w: 'Homem-Aranha', h: 'Às vezes a vida pessoal entra em conflito com grandes responsabilidades.' },
-      { w: 'Thor', h: 'Aprender humildade pode ser mais difícil do que qualquer batalha.' },
-      { w: 'Viúva Negra', h: 'O passado nunca deixa de cobrar, não importa o quanto você mude.' },
-      { w: 'Hulk', h: 'Controlar as próprias emoções pode ser o maior desafio de todos.' },
-      { w: 'Capitão América', h: 'Manter seus valores mesmo quando o mundo muda é essencial.' },
-      { w: 'Thanos', h: 'Alguns acreditam que estão fazendo o certo, mesmo com consequências extremas.' },
-      { w: 'Gavião Arqueiro', h: 'Nem sempre é preciso ter poderes para fazer a diferença.' },
-      { w: 'Doutor Estranho', h: 'Às vezes perder tudo é o começo de uma nova jornada.' },
-      { w: 'Pantera Negra', h: 'Liderar envolve equilibrar tradição e inovação.' },
-      { w: 'Visão', h: 'Entender o que significa ser humano pode ser mais complexo do que parece.' },
-      { w: 'Loki', h: 'Nem sempre dá pra confiar em quem está ao seu lado.' },
-      { w: 'Rocket', h: 'Uma personalidade difícil pode esconder alguém que se importa.' },
-      { w: 'Groot', h: 'Mesmo com poucas palavras, dá pra demonstrar muito.' },
-      { w: 'Wanda', h: 'A dor pode fazer alguém perder o controle da realidade.' },
-      { w: 'Ultron', h: 'Criar algo sem limites pode sair completamente do controle.' },
-      { w: 'Gamora', h: 'Nem todo mundo escolhe de onde veio, mas pode escolher quem quer ser.' },
-      { w: 'Shuri', h: 'Inteligência pode ser a maior arma em qualquer situação.' },
-      { w: 'Okoye', h: 'Lealdade ao dever pode entrar em conflito com sentimentos pessoais.' },
-      { w: 'Falcão', h: 'Assumir um legado pode ser mais pesado do que parece.' },
-      { w: 'Homem de Ferro', h: 'Gênio e ego costumam andar lado a lado.' },
-      { w: 'Nick Fury', h: 'Sempre existe um plano por trás do plano.' },
-      { w: 'Capitã Marvel', h: 'Descobrir quem você é muda completamente sua perspectiva.' },
-      { w: 'Homem-Formiga', h: 'Às vezes pessoas improváveis acabam sendo heróis.' },
-      { w: 'Moon Knight', h: 'A mente pode ser um lugar difícil de entender.' },
-      { w: 'Blade', h: 'Viver entre dois mundos nunca é simples.' },
-      { w: 'Demolidor', h: 'Justiça pode ter significados diferentes dependendo da situação.' },
-      { w: 'Jessica Jones', h: 'Nem todo herói quer ser visto como um.' },
-      { w: 'Máquina de Combate', h: 'Parcerias fortes fazem diferença em momentos críticos.' },
-      { w: 'Ms. Marvel', h: 'Ser fã de algo pode mudar sua própria história.' },
-      { w: 'Vespa', h: 'Trabalhar em equipe é essencial para superar desafios maiores.' },
+      { w: 'Homem-Aranha', h: 'responsabilidade' },
+      { w: 'Thor', h: 'humildade' },
+      { w: 'Viúva Negra', h: 'culpa' },
+      { w: 'Hulk', h: 'controle' },
+      { w: 'Capitão América', h: 'valores' },
+      { w: 'Thanos', h: 'convicção' },
+      { w: 'Gavião Arqueiro', h: 'presença' },
+      { w: 'Doutor Estranho', h: 'recomeço' },
+      { w: 'Pantera Negra', h: 'equilíbrio' },
+      { w: 'Visão', h: 'existência' },
+      { w: 'Loki', h: 'traição' },
+      { w: 'Rocket', h: 'dureza' },
+      { w: 'Groot', h: 'silêncio' },
+      { w: 'Wanda', h: 'luto' },
+      { w: 'Ultron', h: 'criação' },
+      { w: 'Gamora', h: 'escolha' },
+      { w: 'Shuri', h: 'genialidade' },
+      { w: 'Okoye', h: 'dever' },
+      { w: 'Falcão', h: 'legado' },
+      { w: 'Homem de Ferro', h: 'ego' },
+      { w: 'Nick Fury', h: 'estratégia' },
+      { w: 'Capitã Marvel', h: 'identidade' },
+      { w: 'Homem-Formiga', h: 'improvável' },
+      { w: 'Moon Knight', h: 'fragmentação' },
+      { w: 'Blade', h: 'dualidade' },
+      { w: 'Demolidor', h: 'interpretação' },
+      { w: 'Jessica Jones', h: 'relutância' },
+      { w: 'Máquina de Combate', h: 'parceria' },
+      { w: 'Ms. Marvel', h: 'inspiração' },
+      { w: 'Vespa', h: 'sinergia' },
     ]
   },
   programacao: {
     icon: '💻', name: 'Programação',
     words: [
-      { w: 'Bug', h: 'Tudo parecia funcionar… até parar do nada.' },
-      { w: 'Deploy', h: 'Depois disso, todo mundo vai ver o que você fez.' },
-      { w: 'Git', h: 'Sempre tem um histórico pra lembrar do que você fez antes.' },
-      { w: 'API', h: 'É tipo um intermediário que conecta duas coisas diferentes.' },
-      { w: 'Loop', h: 'Às vezes você fica preso repetindo a mesma coisa várias vezes.' },
-      { w: 'Função', h: 'Serve pra evitar fazer a mesma coisa manualmente toda hora.' },
-      { w: 'Array', h: 'Quando você precisa organizar várias coisas em sequência.' },
-      { w: 'Database', h: 'Tudo precisa ser guardado em algum lugar confiável.' },
-      { w: 'Framework', h: 'Ajuda bastante, mas às vezes parece limitar você.' },
-      { w: 'Debug', h: 'É aquele momento de investigar o que deu errado.' },
-      { w: 'Commit', h: 'Um registro do que você decidiu mudar.' },
-      { w: 'Branch', h: 'Um caminho alternativo pra testar sem estragar o principal.' },
-      { w: 'Terminal', h: 'Nem todo mundo gosta, mas quem usa costuma ser rápido.' },
-      { w: 'Servidor', h: 'Tem sempre algo rodando por trás respondendo tudo.' },
-      { w: 'Cache', h: 'Guardar agora pra não precisar buscar depois.' },
-      { w: 'Refactor', h: 'Melhorar sem mudar o que já funciona.' },
-      { w: 'Variável', h: 'Um lugar onde você guarda algo pra usar depois.' },
-      { w: 'Classe', h: 'Uma forma de organizar coisas que têm algo em comum.' },
-      { w: 'Recursão', h: 'Quando algo resolve chamando a si mesmo.' },
-      { w: 'Algoritmo', h: 'Um passo a passo pra chegar em algum resultado.' },
-      { w: 'Compilador', h: 'Transforma algo que você entende em algo que a máquina entende.' },
-      { w: 'Docker', h: 'Funciona igual em qualquer lugar… ou pelo menos deveria.' },
-      { w: 'WebSocket', h: 'Quando a comunicação precisa acontecer em tempo real.' },
-      { w: 'Cookie', h: 'Pequenas informações guardadas sem você perceber.' },
-      { w: 'Token', h: 'Uma forma de provar quem você é sem mostrar tudo.' },
-      { w: 'Endpoint', h: 'Um ponto específico onde algo responde quando chamado.' },
-      { w: 'Middleware', h: 'Algo que acontece no meio do caminho antes do resultado final.' },
-      { w: 'Sprint', h: 'Um período curto com muita coisa pra entregar.' },
-      { w: 'Herança', h: 'Aproveitar algo pronto em vez de começar do zero.' },
-      { w: 'Lint', h: 'Alguém chato que aponta tudo que você fez fora do padrão.' },
+      { w: 'Bug', h: 'falha' },
+      { w: 'Deploy', h: 'exposição' },
+      { w: 'Git', h: 'rastro' },
+      { w: 'API', h: 'ponte' },
+      { w: 'Loop', h: 'ciclo' },
+      { w: 'Função', h: 'eficiência' },
+      { w: 'Array', h: 'sequência' },
+      { w: 'Database', h: 'armazenamento' },
+      { w: 'Framework', h: 'estrutura' },
+      { w: 'Debug', h: 'investigação' },
+      { w: 'Commit', h: 'registro' },
+      { w: 'Branch', h: 'alternativa' },
+      { w: 'Terminal', h: 'velocidade' },
+      { w: 'Servidor', h: 'resposta' },
+      { w: 'Cache', h: 'memória' },
+      { w: 'Refactor', h: 'refinamento' },
+      { w: 'Variável', h: 'recipiente' },
+      { w: 'Classe', h: 'organização' },
+      { w: 'Recursão', h: 'espelho' },
+      { w: 'Algoritmo', h: 'roteiro' },
+      { w: 'Compilador', h: 'tradução' },
+      { w: 'Docker', h: 'portabilidade' },
+      { w: 'WebSocket', h: 'instantâneo' },
+      { w: 'Cookie', h: 'rastro' },
+      { w: 'Token', h: 'autenticação' },
+      { w: 'Endpoint', h: 'destino' },
+      { w: 'Middleware', h: 'intermediário' },
+      { w: 'Sprint', h: 'prazo' },
+      { w: 'Herança', h: 'reaproveitamento' },
+      { w: 'Lint', h: 'padrão' },
     ]
   },
   filmes: {
     icon: '🎬', name: 'Filmes',
     words: [
-      { w: 'Matrix', h: 'Nem tudo ao seu redor é exatamente o que parece ser.' },
-      { w: 'Titanic', h: 'Uma história intensa acontece em meio a uma grande tragédia.' },
-      { w: 'Interestelar', h: 'O tempo pode funcionar de formas muito diferentes dependendo da situação.' },
-      { w: 'Avatar', h: 'Às vezes você precisa viver outra realidade para entender melhor as coisas.' },
-      { w: 'Gladiador', h: 'A queda de alguém pode dar início a uma busca por justiça.' },
-      { w: 'Parasita', h: 'Relações sociais podem esconder intenções inesperadas.' },
-      { w: 'Coringa', h: 'O ambiente pode transformar completamente uma pessoa.' },
-      { w: 'Duna', h: 'Alguém pode carregar um destino maior do que imagina.' },
-      { w: 'Oppenheimer', h: 'Uma descoberta pode trazer consequências difíceis de lidar.' },
-      { w: 'Barbie', h: 'Sair da própria realidade pode mudar a forma de ver o mundo.' },
-      { w: 'Alien', h: 'O desconhecido pode ser muito mais perigoso do que parece.' },
-      { w: 'Tubarão', h: 'O perigo nem sempre é visível, mas ainda assim assusta.' },
-      { w: 'Psicose', h: 'Nem todo lugar aparentemente tranquilo é seguro.' },
-      { w: 'Casablanca', h: 'Nem todo amor acontece no momento certo.' },
-      { w: 'Tenet', h: 'Nem tudo segue a ordem que você espera.' },
-      { w: 'Shrek', h: 'Aparências podem enganar completamente.' },
-      { w: 'Vingadores', h: 'Às vezes é preciso unir pessoas muito diferentes para enfrentar algo maior.' },
-      { w: 'Homem-Aranha', h: 'Equilibrar vida pessoal e responsabilidades pode ser complicado.' },
-      { w: 'Harry Potter', h: 'Descobrir um novo mundo pode mudar completamente sua vida.' },
-      { w: 'Jurassic Park', h: 'Brincar com coisas que você não controla pode dar muito errado.' },
-      { w: 'Batman', h: 'Traumas do passado podem moldar quem você se torna.' },
-      { w: 'Superman', h: 'Ser diferente pode ser tanto um peso quanto uma responsabilidade.' },
-      { w: 'Velozes e Furiosos', h: 'Lealdade pode ser mais importante do que as regras.' },
-      { w: 'Família Addams', h: 'Uma família de matar.' },
-      { w: 'Kung Fu Panda', h: 'Um guerreiro lendário.' },
-      { w: 'Noiva Cadáver', h: 'A morte está no ar.' },
-      { w: 'Apocalypto', h: 'Muito tempo atrás, antes de tudo isso.' },
-      { w: 'Hellboy', h: 'Um filme infernal.' },
-      { w: 'Os Incríveis', h: 'A família unida sempre vai vencer o mal.' },
-      { w: 'Dia D', h: 'Os dias dos humanos estão contados.' },
+      { w: 'Matrix', h: 'ilusão' },
+      { w: 'Titanic', h: 'tragédia' },
+      { w: 'Interestelar', h: 'relatividade' },
+      { w: 'Avatar', h: 'realidade' },
+      { w: 'Gladiador', h: 'queda' },
+      { w: 'Parasita', h: 'sonho' },
+      { w: 'Coringa', h: 'disfarce' },
+      { w: 'Duna', h: 'declínio' },
+      { w: 'Oppenheimer', h: 'destino' },
+      { w: 'Barbie', h: 'consequência' },
+      { w: 'Alien', h: 'ameaça' },
+      { w: 'Tubarão', h: 'invisível' },
+      { w: 'Psicose', h: 'aparência' },
+      { w: 'Casablanca', h: 'timing' },
+      { w: 'Tenet', h: 'ordem' },
+      { w: 'Shrek', h: 'superfície' },
+      { w: 'Vingadores', h: 'união' },
+      { w: 'Homem-Aranha', h: 'equilíbrio' },
+      { w: 'Harry Potter', h: 'descoberta' },
+      { w: 'Jurassic Park', h: 'controle' },
+      { w: 'Batman', h: 'trauma' },
+      { w: 'Superman', h: 'peso' },
+      { w: 'Velozes e Furiosos', h: 'lealdade' },
+      { w: 'Família Addams', h: 'família' },
+      { w: 'Kung Fu Panda', h: 'lenda' },
+      { w: 'Noiva Cadáver', h: 'morte' },
+      { w: 'Apocalypto', h: 'antiguidade' },
+      { w: 'Hellboy', h: 'inferno' },
+      { w: 'Os Incríveis', h: 'força' },
+      { w: 'Dia D', h: 'extinção' },
     ]
   },
   series: {
     icon: '📺', name: 'Séries',
     words: [
-      { w: 'Breaking Bad', h: 'Uma escolha muda completamente quem alguém é.' },
-      { w: 'Friends', h: 'Quando os amigos viram a sua verdadeira família.' },
-      { w: 'The Office', h: 'O dia a dia no trabalho pode ser mais absurdo do que parece.' },
-      { w: 'Stranger Things', h: 'Às vezes o perigo está muito mais perto do que imaginamos.' },
-      { w: 'Game of Thrones', h: 'Quem quer poder demais acaba perdendo o que importa.' },
-      { w: 'Dark', h: 'Algumas histórias se repetem de formas que a gente não espera.' },
-      { w: 'Chernobyl', h: 'Esconder a verdade pode ter consequências devastadoras.' },
-      { w: 'Sherlock', h: 'Prestar atenção nos detalhes muda tudo.' },
-      { w: 'Lost', h: 'Sobreviver é só o começo dos problemas.' },
-      { w: 'Round 6', h: 'Desespero faz as pessoas aceitarem situações impensáveis.' },
-      { w: 'Euphoria', h: 'Por fora pode parecer normal, por dentro é caos.' },
-      { w: 'Ozark', h: 'Uma decisão errada pode te prender numa situação sem saída.' },
-      { w: 'Narcos', h: 'Poder e dinheiro têm um preço alto demais.' },
-      { w: 'Mindhunter', h: 'Entender o mal pode te afetar mais do que você imagina.' },
-      { w: 'Succession', h: 'Família e ambição raramente combinam bem.' },
-      { w: 'Fleabag', h: 'Às vezes a gente ri pra não chorar.' },
-      { w: 'Atlanta', h: 'Tentar crescer num ambiente difícil nunca é simples.' },
-      { w: 'Hannibal', h: 'Elegância e perigo podem coexistir na mesma pessoa.' },
-      { w: 'Mr. Robot', h: 'Questionar o sistema pode te isolar completamente.' },
-      { w: 'Better Call Saul', h: 'Pequenas escolhas erradas se acumulam ao longo do tempo.' },
-      { w: 'The Boys', h: 'Heróis também podem ser os vilões da história.' },
-      { w: 'Severance', h: 'Separar trabalho e vida pessoal pode ser mais radical do que parece.' },
-      { w: 'The Bear', h: 'Pressão e paixão andam sempre juntos.' },
-      { w: 'White Lotus', h: 'Dinheiro não resolve os problemas, só os esconde.' },
-      { w: 'Silo', h: 'Às vezes a verdade é protegida pela ignorância.' },
-      { w: 'Fallout', h: 'O que sobra depois do fim pode ser pior do que o fim.' },
-      { w: 'House of Dragon', h: 'Família e poder raramente coexistem em paz.' },
-      { w: 'Andor', h: 'Resistir começa com pequenos atos de coragem.' },
-      { w: 'Yellowjackets', h: 'Sobreviver muda as pessoas de formas que elas não esperam.' },
-      { w: 'Pachinko', h: 'O passado de uma família molda todas as gerações seguintes.' },
+      { w: 'Breaking Bad', h: 'transformação' },
+      { w: 'Friends', h: 'vínculo' },
+      { w: 'The Office', h: 'absurdo' },
+      { w: 'Stranger Things', h: 'ameaça' },
+      { w: 'Game of Thrones', h: 'poder' },
+      { w: 'Dark', h: 'padrão' },
+      { w: 'Chernobyl', h: 'silêncio' },
+      { w: 'Sherlock', h: 'detalhe' },
+      { w: 'Lost', h: 'recomeço' },
+      { w: 'Round 6', h: 'desespero' },
+      { w: 'Euphoria', h: 'caos' },
+      { w: 'Ozark', h: 'armadilha' },
+      { w: 'Narcos', h: 'preço' },
+      { w: 'Mindhunter', h: 'profundidade' },
+      { w: 'Succession', h: 'herança' },
+      { w: 'Fleabag', h: 'leveza' },
+      { w: 'Atlanta', h: 'sobrevivência' },
+      { w: 'Hannibal', h: 'refinamento' },
+      { w: 'Mr. Robot', h: 'isolamento' },
+      { w: 'Better Call Saul', h: 'acúmulo' },
+      { w: 'The Boys', h: 'corrupção' },
+      { w: 'Severance', h: 'divisão' },
+      { w: 'The Bear', h: 'paixão' },
+      { w: 'White Lotus', h: 'aparência' },
+      { w: 'Silo', h: 'ignorância' },
+      { w: 'Fallout', h: 'escombros' },
+      { w: 'House of Dragon', h: 'conflito' },
+      { w: 'Andor', h: 'resistência' },
+      { w: 'Yellowjackets', h: 'mudança' },
+      { w: 'Pachinko', h: 'raízes' },
     ]
   },
   desenhos: {
     icon: '🎨', name: 'Desenhos',
     words: [
-      { w: 'Bob Esponja', h: 'Otimismo demais pode irritar qualquer um.' },
-      { w: 'Tom e Jerry', h: 'Algumas rivalidades nunca têm fim.' },
-      { w: 'Pernalonga', h: 'Calma e esperteza vencem qualquer situação.' },
-      { w: 'Pato Donald', h: 'Ter mau humor pode complicar tudo ao redor.' },
-      { w: 'Scooby-Doo', h: 'Com amigos, até o medo fica mais fácil.' },
-      { w: 'Popeye', h: 'Às vezes só falta aquele empurrãozinho extra.' },
-      { w: 'Thundercats', h: 'Guerreiros felinos de outro planeta combatem vilão.' },
-      { w: 'Flintstones', h: 'A vida moderna existia bem antes da tecnologia.' },
-      { w: 'Jetsons', h: 'Família do futuro com robôs e carros voadores.' },
-      { w: 'Johnny Bravo', h: 'Confiança demais pode ser um problema sério.' },
-      { w: 'Dexter', h: 'Guardar segredos em casa é mais difícil do que parece.' },
-      { w: 'Rugrats', h: 'Bebês que vivem aventuras enquanto adultos não veem.' },
-      { w: 'Steven Universe', h: 'Amor pode ser a maior força de todas.' },
-      { w: 'Gravity Falls', h: 'Gêmeos passam verão em cidade cheia de fenômenos.' },
-      { w: 'Rick e Morty', h: 'Ciência louca e família viajam pelo multiverso.' },
-      { w: 'Samurai Jack', h: 'Guerreiro japonês preso no futuro distópico.' },
-      { w: 'Courage', h: 'Amor pela família faz superar qualquer medo.' },
-      { w: 'Ed Edd Eddy', h: 'Planos mirabolantes raramente dão certo.' },
-      { w: 'Animaniacs', h: 'Trio de animais irrita celebridades e funcionários do estúdio.' },
-      { w: 'Pinky e Cérebro', h: 'Dois camundongos planejam dominar o mundo toda noite.' },
-      { w: 'Avatar', h: 'Equilíbrio entre mundos depende de uma só pessoa.' },
-      { w: 'Ben 10', h: 'Garoto com relógio alienígena que transforma em criaturas.' },
-      { w: 'Hora de Aventura', h: 'Garoto e cachorro mágico em terra de fantasy pós-apocalíptico.' },
-      { w: 'Pica-Pau', h: 'Pássaro travesso que irrita todos com risada escandalosa.' },
-      { w: 'Tartarugas Ninja', h: 'Répteis mutantes aprendem artes marciais nos esgotos.' },
-      { w: 'He-Man', h: 'Príncipe que levanta a espada e se transforma em campeão.' },
-      { w: 'KND', h: 'Crianças formam organização secreta contra adultos.' },
-      { w: 'Juniper Lee', h: 'Monstros à solta precisam de um herói na cidade.' },
-      { w: 'Peppa Pig', h: 'Animal que ama poças de lama com a família.' },
-      { w: 'Irmão do Jorel', h: 'Menino tem irmão famoso e família excêntrica.' },
+      { w: 'Bob Esponja', h: 'otimismo' },
+      { w: 'Tom e Jerry', h: 'rivalidade' },
+      { w: 'Pernalonga', h: 'calma' },
+      { w: 'Pato Donald', h: 'temperamento' },
+      { w: 'Scooby-Doo', h: 'coragem' },
+      { w: 'Popeye', h: 'impulso' },
+      { w: 'Thundercats', h: 'guerreiro' },
+      { w: 'Flintstones', h: 'modernidade' },
+      { w: 'Jetsons', h: 'futuro' },
+      { w: 'Johnny Bravo', h: 'vaidade' },
+      { w: 'Dexter', h: 'segredo' },
+      { w: 'Rugrats', h: 'imaginação' },
+      { w: 'Steven Universe', h: 'amor' },
+      { w: 'Gravity Falls', h: 'mistério' },
+      { w: 'Rick e Morty', h: 'caos' },
+      { w: 'Samurai Jack', h: 'honra' },
+      { w: 'Courage', h: 'proteção' },
+      { w: 'Ed Edd Eddy', h: 'ambição' },
+      { w: 'Animaniacs', h: 'irritação' },
+      { w: 'Pinky e Cérebro', h: 'conquista' },
+      { w: 'Avatar', h: 'equilíbrio' },
+      { w: 'Ben 10', h: 'transformação' },
+      { w: 'Hora de Aventura', h: 'aventura' },
+      { w: 'Pica-Pau', h: 'irreverência' },
+      { w: 'Tartarugas Ninja', h: 'disciplina' },
+      { w: 'He-Man', h: 'poder' },
+      { w: 'KND', h: 'rebeldia' },
+      { w: 'Juniper Lee', h: 'heroísmo' },
+      { w: 'Peppa Pig', h: 'inocência' },
+      { w: 'Irmão do Jorel', h: 'fama' },
     ]
   },
   animais: {
     icon: '🦁', name: 'Animais',
     words: [
-      { w: 'Tubarão', h: 'Peixe predador com várias fileiras de dentes.' },
-      { w: 'Elefante', h: 'Maior animal terrestre com tromba e memória incrível.' },
-      { w: 'Gorila', h: 'Primata enorme que vive em grupos na selva africana.' },
-      { w: 'Coala', h: 'Marsupial australiano que dorme 20 horas por dia.' },
-      { w: 'Pinguim', h: 'Ave que não voa e caminha de forma engraçada.' },
-      { w: 'Ornitorrinco', h: 'Mamífero com bico de pato que bota ovos.' },
-      { w: 'Axolote', h: 'Salamandra aquática com guelras externas e sorriso permanente.' },
-      { w: 'Camaleão', h: 'Réptil que muda de cor e tem língua relâmpago.' },
-      { w: 'Narval', h: 'Baleia ártica com chifre espiral gigante.' },
-      { w: 'Pangolim', h: 'Mamífero coberto de escamas que se enrola em bola.' },
-      { w: 'Quokka', h: 'Marsupial australiano que parece sempre sorrindo.' },
-      { w: 'Capivara', h: 'Maior roedor do mundo que vira amigo de tudo.' },
-      { w: 'Lontra', h: 'Animal aquático que dorme de mãos dadas para não separar.' },
-      { w: 'Tatu', h: 'Mamífero com armadura que se enrola em bola.' },
-      { w: 'Preguiça', h: 'Mamífero que vive pendurado em árvores quase sem se mover.' },
-      { w: 'Tamanduá', h: 'Mamífero de focinho longo que come formigas.' },
-      { w: 'Anta', h: 'Mamífero com focinho parecido com miniatura de elefante brasileiro.' },
-      { w: 'Piranha', h: 'Peixe carnívoro de dentes afiados em rios amazônicos.' },
-      { w: 'Arara', h: 'Papagaio gigante colorido da selva amazônica.' },
-      { w: 'Sucuri', h: 'Cobra aquática gigante do Brasil.' },
-      { w: 'Lobo Guará', h: 'Canídeo brasileiro de pernas longas e pelagem laranja.' },
-      { w: 'Onça Pintada', h: 'Maior felino das Américas com manchas circulares.' },
-      { w: 'Boto', h: 'Golfinho de rio da Amazônia de cor rosada.' },
-      { w: 'Mico Leão', h: 'Pequeno primata laranja em perigo de extinção.' },
-      { w: 'Jabuti', h: 'Tartaruga terrestre lenta e longeva do Brasil.' },
-      { w: 'Peixe-Boi', h: 'Mamífero aquático gordinho que pasta em rios.' },
-      { w: 'Canguru', h: 'Marsupial que carrega filhote no bolso e pula alto.' },
-      { w: 'Fossa', h: 'Predador de Madagascar parecido com gato e raposa.' },
-      { w: 'Manta', h: 'Arraia gigante que voa pela água do oceano.' },
-      { w: 'Tapir', h: 'Mamífero com focinho flexível parecido com elefante miniatura.' },
+      { w: 'Tubarão', h: 'predador' },
+      { w: 'Elefante', h: 'memória' },
+      { w: 'Gorila', h: 'força' },
+      { w: 'Coala', h: 'sono' },
+      { w: 'Pinguim', h: 'caminhada' },
+      { w: 'Ornitorrinco', h: 'contradição' },
+      { w: 'Axolote', h: 'sorriso' },
+      { w: 'Camaleão', h: 'adaptação' },
+      { w: 'Narval', h: 'chifre' },
+      { w: 'Pangolim', h: 'armadura' },
+      { w: 'Quokka', h: 'alegria' },
+      { w: 'Capivara', h: 'tamanho' },
+      { w: 'Lontra', h: 'companhia' },
+      { w: 'Tatu', h: 'proteção' },
+      { w: 'Preguiça', h: 'lentidão' },
+      { w: 'Tamanduá', h: 'fome' },
+      { w: 'Anta', h: 'semelhança' },
+      { w: 'Piranha', h: 'perigo' },
+      { w: 'Arara', h: 'cor' },
+      { w: 'Sucuri', h: 'gigante' },
+      { w: 'Lobo Guará', h: 'pelagem' },
+      { w: 'Onça Pintada', h: 'manchas' },
+      { w: 'Boto', h: 'rosa' },
+      { w: 'Mico Leão', h: 'raridade' },
+      { w: 'Jabuti', h: 'longevidade' },
+      { w: 'Peixe-Boi', h: 'quietude' },
+      { w: 'Canguru', h: 'salto' },
+      { w: 'Fossa', h: 'estranheza' },
+      { w: 'Manta', h: 'planar' },
+      { w: 'Tapir', h: 'focinho' },
     ]
   },
   jogos: {
     icon: '🎮', name: 'Jogos',
     words: [
-      { w: 'Minecraft', h: 'Jogo de blocos onde você constrói e sobrevive.' },
-      { w: 'Zelda', h: 'Herói de verde que salva princesa de vilão poderoso.' },
-      { w: 'Mario', h: 'Encanador italiano que pula em cogumelos e resgata princesa.' },
-      { w: 'Sonic', h: 'Ouriço azul superveloz que coleta anéis dourados.' },
-      { w: 'Pokémon', h: 'Criaturas que são capturadas e treinam para batalhar.' },
-      { w: 'Dark Souls', h: 'RPG brutal onde você morre muito e aprende com isso.' },
-      { w: 'Fortnite', h: '100 jogadores em ilha, último de pé vence com construção.' },
-      { w: 'Tetris', h: 'Blocos que caem e você deve encaixar sem buracos.' },
-      { w: 'Pac-Man', h: 'Bolinha amarela come pontos e foge de fantasmas.' },
-      { w: 'Street Fighter', h: 'Lutadores do mundo inteiro se enfrentam em duelos.' },
-      { w: 'God of War', h: 'Guerreiro espartano mata deuses com correntes nos braços.' },
-      { w: 'GTA', h: 'Mundo aberto de crime onde você rouba carros e faz missões.' },
-      { w: 'Doom', h: 'Marine espacial mata demônios em velocidade frenética.' },
-      { w: 'Elden Ring', h: 'Mundo aberto sombrio onde você enfrenta chefes imensos.' },
-      { w: 'Hollow Knight', h: 'Inseto cavaleiro explora reino subterrâneo decadente.' },
-      { w: 'Celeste', h: 'Garota escala montanha perigosa lidando com ansiedade.' },
-      { w: 'Hades', h: 'Filho de Hades tenta escapar do submundo repetidamente.' },
-      { w: 'Among Us', h: 'Astronautas tentam descobrir quem é o traidor na nave.' },
-      { w: 'Stardew Valley', h: 'Fazendeiro herda terra e cuida de culturas e relacionamentos.' },
-      { w: 'Red Dead', h: 'Cowboy no velho oeste americano em mundo aberto.' },
-      { w: 'The Last of Us', h: 'Homem protege garota imune em mundo pós-apocalíptico.' },
-      { w: 'Cyberpunk', h: 'Mercenário em cidade futurista cheia de néon e corpo modificado.' },
-      { w: 'Portal', h: 'Cientista usa arma que cria portais para resolver puzzles.' },
-      { w: 'Half-Life', h: 'Físico enfrenta aliens após experimento catastrófico.' },
-      { w: 'Bioshock', h: 'Cidade submarina distópica com poderes genéticos.' },
-      { w: 'Undertale', h: 'Criança cai no subsolo e pode poupar os monstros.' },
-      { w: 'Cuphead', h: 'Personagem de desenho antigo enfrenta chefes do diabo.' },
-      { w: 'Bloodborne', h: 'Caçador combate bestas em cidade vitoriana lovecraftiana.' },
-      { w: 'Resident Evil', h: 'Equipe especializada enfrenta situações monstruosas.' },
-      { w: 'Roblox', h: 'Polêmicas e até mudanças reais.' },
+      { w: 'Minecraft', h: 'construção' },
+      { w: 'Zelda', h: 'missão' },
+      { w: 'Mario', h: 'encanador' },
+      { w: 'Sonic', h: 'velocidade' },
+      { w: 'Pokémon', h: 'batalha' },
+      { w: 'Dark Souls', h: 'morte' },
+      { w: 'Fortnite', h: 'sobrevivência' },
+      { w: 'Tetris', h: 'encaixe' },
+      { w: 'Pac-Man', h: 'fuga' },
+      { w: 'Street Fighter', h: 'duelo' },
+      { w: 'God of War', h: 'divindade' },
+      { w: 'GTA', h: 'crime' },
+      { w: 'Doom', h: 'inferno' },
+      { w: 'Elden Ring', h: 'desafio' },
+      { w: 'Hollow Knight', h: 'decadência' },
+      { w: 'Celeste', h: 'ansiedade' },
+      { w: 'Hades', h: 'escape' },
+      { w: 'Among Us', h: 'traição' },
+      { w: 'Stardew Valley', h: 'colheita' },
+      { w: 'Red Dead', h: 'horizonte' },
+      { w: 'The Last of Us', h: 'proteção' },
+      { w: 'Cyberpunk', h: 'néon' },
+      { w: 'Portal', h: 'portal' },
+      { w: 'Half-Life', h: 'experimento' },
+      { w: 'Bioshock', h: 'distopia' },
+      { w: 'Undertale', h: 'compaixão' },
+      { w: 'Cuphead', h: 'diabo' },
+      { w: 'Bloodborne', h: 'sangue' },
+      { w: 'Resident Evil', h: 'monstro' },
+      { w: 'Roblox', h: 'polêmica' },
     ]
   },
   literatura: {
     icon: '📚', name: 'Literatura',
     words: [
-      { w: 'Hamlet', h: 'Príncipe dinamarquês que suspeita do tio ter matado o pai.' },
-      { w: 'Dom Quixote', h: 'Cavaleiro louco que luta contra moinhos de vento.' },
-      { w: 'Odisseia', h: 'Guerreiro grego demora dez anos para voltar para casa.' },
-      { w: 'Metamorfose', h: 'Homem acorda transformado em inseto gigante.' },
-      { w: '1984', h: 'Sociedade totalitária vigiada por líder onipresente.' },
-      { w: 'Drácula', h: 'Nobre transilvano que se alimenta de sangue à noite.' },
-      { w: 'Frankenstein', h: 'Cientista cria monstro a partir de partes de corpos.' },
-      { w: 'Moby Dick', h: 'Capitão obcecado por uma baleia branca enorme.' },
-      { w: 'Crime e Castigo', h: 'Estudante mata e lida com culpa avassaladora.' },
-      { w: 'Dom Casmurro', h: 'Narrador ciumento relata suposta traição da esposa.' },
-      { w: 'O Alienista', h: 'Médico interna metade da cidade num hospício.' },
-      { w: 'Grande Sertão', h: 'Jagunço narra vida no sertão brasileiro ao longo do tempo.' },
-      { w: 'Iracema', h: 'Indígena cearense se apaixona por colonizador português.' },
-      { w: 'Vidas Secas', h: 'Família de retirantes foge da seca no nordeste.' },
-      { w: 'A Hora da Estrela', h: 'Nordestina ingênua tenta sobreviver no Rio de Janeiro.' },
-      { w: 'Fahrenheit 451', h: 'Bombeiro queima livros em sociedade que proíbe leitura.' },
-      { w: 'O Senhor dos Anéis', h: 'Hobbits e elfos destroem anel do poder contra o mal.' },
-      { w: 'Harry Potter', h: 'Menino aprende magia em escola de feiticeiros.' },
-      { w: 'O Pequeno Príncipe', h: 'Menino de planeta distante visita a Terra e questiona adultos.' },
-      { w: 'A Revolução dos Bichos', h: 'Animais expulsam dono da fazenda e criam governo próprio.' },
-      { w: 'Cem Anos de Solidão', h: 'Família colombiana atravessa gerações de solidão e tragédia.' },
-      { w: 'O Alquimista', h: 'Pastor jovem busca tesouro e aprende sobre destino.' },
-      { w: 'Capitães da Areia', h: 'Menores abandonados formam gangue nas ruas de Salvador.' },
-      { w: 'Memórias Póstumas', h: 'Defunto narra sua própria vida do além em tom irônico.' },
-      { w: 'Lavoura Arcaica', h: 'Filho pródigo é buscado pelo irmão na fazenda do pai.' },
-      { w: 'Quincas Borba', h: 'Filósofo louco cria doutrina absurda chamada humanitismo.' },
-      { w: 'Sagarana', h: 'Contos do interior mineiro com animais e homens simples.' },
-      { w: 'Macunaíma', h: 'Herói sem nenhum caráter percorre o Brasil em aventuras.' },
-      { w: 'Ensaio sobre a Cegueira', h: 'Epidemia de cegueira branca isola pessoas em quarentena caótica.' },
-      { w: 'Ficciones', h: 'Contos de labirintos, espelhos e realidades impossíveis.' },
+      { w: 'Hamlet', h: 'suspeita' },
+      { w: 'Dom Quixote', h: 'loucura' },
+      { w: 'Odisseia', h: 'jornada' },
+      { w: 'Metamorfose', h: 'metamorfose' },
+      { w: '1984', h: 'vigilância' },
+      { w: 'Drácula', h: 'sangue' },
+      { w: 'Frankenstein', h: 'criação' },
+      { w: 'Moby Dick', h: 'obsessão' },
+      { w: 'Crime e Castigo', h: 'culpa' },
+      { w: 'Dom Casmurro', h: 'ciúme' },
+      { w: 'O Alienista', h: 'internação' },
+      { w: 'Grande Sertão', h: 'sertão' },
+      { w: 'Iracema', h: 'amor' },
+      { w: 'Vidas Secas', h: 'seca' },
+      { w: 'A Hora da Estrela', h: 'sobrevivência' },
+      { w: 'Fahrenheit 451', h: 'censura' },
+      { w: 'O Senhor dos Anéis', h: 'missão' },
+      { w: 'Harry Potter', h: 'magia' },
+      { w: 'O Pequeno Príncipe', h: 'questionamento' },
+      { w: 'A Revolução dos Bichos', h: 'rebeldia' },
+      { w: 'Cem Anos de Solidão', h: 'solidão' },
+      { w: 'O Alquimista', h: 'destino' },
+      { w: 'Capitães da Areia', h: 'marginalidade' },
+      { w: 'Memórias Póstumas', h: 'ironia' },
+      { w: 'Lavoura Arcaica', h: 'retorno' },
+      { w: 'Quincas Borba', h: 'absurdo' },
+      { w: 'Sagarana', h: 'simplicidade' },
+      { w: 'Macunaíma', h: 'caráter' },
+      { w: 'Ensaio sobre a Cegueira', h: 'cegueira' },
+      { w: 'Ficciones', h: 'labirinto' },
     ]
   },
   comidas: {
     icon: '🍕', name: 'Comidas',
     words: [
-      { w: 'Sushi', h: 'Arroz temperado com peixe cru enrolado ou moldado.' },
-      { w: 'Lasanha', h: 'Massas em camadas intercaladas com molho e queijo.' },
-      { w: 'Brigadeiro', h: 'Doce de chocolate condensado enrolado em granulado.' },
-      { w: 'Tapioca', h: 'Disco de goma de mandioca recheado com doce ou salgado.' },
-      { w: 'Coxinha', h: 'Frito em forma de gota recheado de frango desfiado.' },
-      { w: 'Feijoada', h: 'Feijão preto cozido com carnes defumadas e embutidos.' },
-      { w: 'Paella', h: 'Arroz espanhol com frutos do mar na frigideira larga.' },
-      { w: 'Ramen', h: 'Sopa japonesa com macarrão e caldo de horas de preparo.' },
-      { w: 'Croissant', h: 'Massa folhada em forma de lua crescente.' },
-      { w: 'Yakisoba', h: 'Macarrão frito com legumes e molho escuro.' },
-      { w: 'Moqueca', h: 'Peixe cozido no leite de coco e azeite de dendê.' },
-      { w: 'Acarajé', h: 'Bolinho de feijão frito no dendê recheado com vatapá.' },
-      { w: 'Pastel', h: 'Massa frita recheada e dobrada em forma retangular.' },
-      { w: 'Churrasco', h: 'Carnes assadas lentamente na brasa ou espeto.' },
-      { w: 'Pão de Queijo', h: 'Bolinho esponjoso de polvilho e queijo mineiro.' },
-      { w: 'Escondidinho', h: 'Carne desfiada coberta por purê de mandioca gratinado.' },
-      { w: 'Temaki', h: 'Cone de alga marinha recheado com arroz e peixe.' },
-      { w: 'Fondue', h: 'Queijo ou chocolate derretido em que se mergulha pedaços.' },
-      { w: 'Crepe', h: 'Massa fina redonda dobrada com recheio doce ou salgado.' },
-      { w: 'Tiramisu', h: 'Sobremesa italiana de café, mascarpone e biscoito.' },
-      { w: 'Carbonara', h: 'Massa com ovo, queijo e bacon sem creme de leite.' },
-      { w: 'Empada', h: 'Tortinha fechada de massa podre com recheio variado.' },
-      { w: 'Caldo Verde', h: 'Sopa portuguesa de couve com linguiça e batata.' },
-      { w: 'Pato no Tucupi', h: 'Pato cozido em caldo amarelo ácido da Amazônia.' },
-      { w: 'Baião de Dois', h: 'Arroz com feijão verde e queijo coalho típico nordestino.' },
-      { w: 'Quibe', h: 'Bolinho de carne moída com trigo e hortelã.' },
-      { w: 'Esfira', h: 'Salgado de massa aberta com carne ou queijo.' },
-      { w: 'Brigadeirão', h: 'Pudim de chocolate cremoso e denso assado no forno.' },
-      { w: 'Cuscuz', h: 'Farinha de milho cozida no vapor com acompanhamentos.' },
-      { w: 'Pirão', h: 'Mingau espesso de farinha de mandioca com caldo de peixe.' },
+      { w: 'Sushi', h: 'mar' },
+      { w: 'Lasanha', h: 'camadas' },
+      { w: 'Brigadeiro', h: 'chocolate' },
+      { w: 'Tapioca', h: 'goma' },
+      { w: 'Coxinha', h: 'frito' },
+      { w: 'Feijoada', h: 'feijão' },
+      { w: 'Paella', h: 'arroz' },
+      { w: 'Ramen', h: 'caldo' },
+      { w: 'Croissant', h: 'folhado' },
+      { w: 'Yakisoba', h: 'macarrão' },
+      { w: 'Moqueca', h: 'dendê' },
+      { w: 'Acarajé', h: 'vatapá' },
+      { w: 'Pastel', h: 'massa' },
+      { w: 'Churrasco', h: 'brasa' },
+      { w: 'Pão de Queijo', h: 'polvilho' },
+      { w: 'Escondidinho', h: 'purê' },
+      { w: 'Temaki', h: 'alga' },
+      { w: 'Fondue', h: 'derretido' },
+      { w: 'Crepe', h: 'dobrado' },
+      { w: 'Tiramisu', h: 'café' },
+      { w: 'Carbonara', h: 'ovo' },
+      { w: 'Empada', h: 'tortinha' },
+      { w: 'Caldo Verde', h: 'couve' },
+      { w: 'Pato no Tucupi', h: 'tucupi' },
+      { w: 'Baião de Dois', h: 'coalho' },
+      { w: 'Quibe', h: 'hortelã' },
+      { w: 'Esfira', h: 'queijo' },
+      { w: 'Brigadeirão', h: 'pudim' },
+      { w: 'Cuscuz', h: 'vapor' },
+      { w: 'Pirão', h: 'mandioca' },
     ]
   },
   ingles: {
     icon: '🇬🇧', name: 'English Words',
     words: [
-      { w: 'Ephemeral', h: 'Something that lasts only a very short time.' },
-      { w: 'Serendipity', h: 'Happy accident — finding something good you were not looking for.' },
-      { w: 'Melancholy', h: 'Deep feeling of sadness without a clear reason.' },
-      { w: 'Whimsical', h: 'Playfully quaint or unusual in a charming way.' },
-      { w: 'Labyrinth', h: 'Complicated network of passages with no obvious exit.' },
-      { w: 'Zenith', h: 'The highest point reached by something in the sky or in life.' },
-      { w: 'Cascade', h: 'A small waterfall or things falling one after another.' },
-      { w: 'Paradox', h: 'Statement that contradicts itself but may still be true.' },
-      { w: 'Elusive', h: 'Difficult to find, catch, or define.' },
-      { w: 'Resilient', h: 'Able to recover quickly from difficult situations.' },
-      { w: 'Wanderlust', h: 'Strong desire to travel and explore the world.' },
-      { w: 'Petrichor', h: 'The pleasant earthy smell after rain falls on dry soil.' },
-      { w: 'Solitude', h: 'The state of being alone, often by choice and peacefully.' },
-      { w: 'Eloquent', h: 'Fluent and persuasive in speaking or writing.' },
-      { w: 'Tenacious', h: 'Holding firm to something and not giving up easily.' },
-      { w: 'Luminous', h: 'Giving off light or brilliantly clear and radiant.' },
-      { w: 'Cryptic', h: 'Having a meaning that is mysterious or hard to understand.' },
-      { w: 'Nostalgia', h: 'Sentimental longing for a past that may be idealized.' },
-      { w: 'Ambivalent', h: 'Having mixed or contradictory feelings about something.' },
-      { w: 'Pristine', h: 'In its original condition, completely clean and fresh.' },
-      { w: 'Obsolete', h: 'No longer produced or used, outdated and replaced.' },
-      { w: 'Euphoria', h: 'Intense feeling of happiness and well-being.' },
-      { w: 'Catharsis', h: 'Release of emotional tension through art or experience.' },
-      { w: 'Ubiquitous', h: 'Appearing everywhere at the same time.' },
-      { w: 'Stoic', h: 'Enduring pain or hardship without showing emotion.' },
-      { w: 'Pensive', h: 'Engaged in deep or serious thought.' },
-      { w: 'Aloof', h: 'Not friendly or forthcoming, keeping distant.' },
-      { w: 'Candid', h: 'Truthful and straightforward, not hiding anything.' },
-      { w: 'Frugal', h: 'Sparing or economical with money and resources.' },
-      { w: 'Verbose', h: 'Using more words than needed to express something.' },
+      { w: 'Ephemeral', h: 'brevidade' },
+      { w: 'Serendipity', h: 'acidente' },
+      { w: 'Melancholy', h: 'tristeza' },
+      { w: 'Whimsical', h: 'peculiar' },
+      { w: 'Labyrinth', h: 'labirinto' },
+      { w: 'Zenith', h: 'topo' },
+      { w: 'Cascade', h: 'queda' },
+      { w: 'Paradox', h: 'contradição' },
+      { w: 'Elusive', h: 'esquivo' },
+      { w: 'Resilient', h: 'resiliência' },
+      { w: 'Wanderlust', h: 'movimento' },
+      { w: 'Petrichor', h: 'cheiro' },
+      { w: 'Solitude', h: 'paz' },
+      { w: 'Eloquent', h: 'persuasão' },
+      { w: 'Tenacious', h: 'firmeza' },
+      { w: 'Luminous', h: 'brilho' },
+      { w: 'Cryptic', h: 'mistério' },
+      { w: 'Nostalgia', h: 'saudade' },
+      { w: 'Ambivalent', h: 'ambivalência' },
+      { w: 'Pristine', h: 'pureza' },
+      { w: 'Obsolete', h: 'obsolência' },
+      { w: 'Euphoria', h: 'euforia' },
+      { w: 'Catharsis', h: 'alívio' },
+      { w: 'Ubiquitous', h: 'onipresença' },
+      { w: 'Stoic', h: 'frieza' },
+      { w: 'Pensive', h: 'pensamento' },
+      { w: 'Aloof', h: 'distância' },
+      { w: 'Candid', h: 'honestidade' },
+      { w: 'Frugal', h: 'economia' },
+      { w: 'Verbose', h: 'prolixidade' },
     ]
   }
 };
 
 /* ── STATE ── */
 let players = [], selectedTheme = null, history = [], currentRound = null, cardIdx = 0, cardFlipped = false;
+let hintEnabled = true, numImpostors = 1;
 try { history = JSON.parse(localStorage.getItem('impostor_v3') || '[]'); } catch (e) {}
 
 /* ── SCREEN NAV ── */
@@ -458,6 +459,14 @@ function renderPlayers() {
 }
 function updateStartBtn() {
   document.getElementById('startBtn').disabled = players.length < 3 || !selectedTheme;
+  // Clamp impostor count to valid range whenever player count changes
+  const maxImp = Math.max(1, Math.floor(players.length / 2) - 1);
+  if (numImpostors > maxImp) {
+    numImpostors = maxImp;
+    document.getElementById('impostorCount').textContent = numImpostors;
+    document.getElementById('impostorCountLabel').textContent =
+      numImpostors === 1 ? '1 impostor por rodada' : numImpostors + ' impostores por rodada';
+  }
 }
 function updateSteps() {
   document.getElementById('s1').className = 'step' + (players.length > 0 ? ' done' : '');
@@ -471,22 +480,52 @@ function showAlert(msg) {
   setTimeout(() => a.style.display = 'none', 2200);
 }
 
+/* ── OPTIONS ── */
+function toggleHint() {
+  hintEnabled = !hintEnabled;
+  const btn = document.getElementById('hintToggle');
+  btn.classList.toggle('active', hintEnabled);
+}
+
+function changeImpostors(delta) {
+  const maxImpostors = Math.max(1, Math.floor(players.length / 2) - 1) || 1;
+  numImpostors = Math.min(Math.max(1, numImpostors + delta), maxImpostors);
+  document.getElementById('impostorCount').textContent = numImpostors;
+  document.getElementById('impostorCountLabel').textContent =
+    numImpostors === 1 ? '1 impostor por rodada' : numImpostors + ' impostores por rodada';
+}
+
 /* ── ROUND ── */
 function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
+
+function pickImpostors(total, count) {
+  const idxs = [];
+  while (idxs.length < count) {
+    const r = Math.floor(Math.random() * total);
+    if (!idxs.includes(r)) idxs.push(r);
+  }
+  return idxs;
+}
 
 function startRound() {
   if (players.length < 3 || !selectedTheme) return;
   const theme = THEMES[selectedTheme];
   const wordObj = shuffle(theme.words)[0];
   const shuffledPlayers = shuffle([...players]);
-  const impostorIdx = Math.floor(Math.random() * shuffledPlayers.length);
+  // Clamp impostors to valid range for current player count
+  const maxImp = Math.max(1, Math.floor(shuffledPlayers.length / 2) - 1);
+  const actualImpostors = Math.min(numImpostors, maxImp);
+  const impostorIdxs = pickImpostors(shuffledPlayers.length, actualImpostors);
   currentRound = {
     theme: selectedTheme,
     themeName: theme.name,
     themeIcon: theme.icon,
     word: wordObj.w,
     hint: wordObj.h,
-    impostorIdx,
+    hintEnabled,
+    impostorIdxs,
+    // keep legacy field for history compatibility
+    impostorIdx: impostorIdxs[0],
     players: shuffledPlayers,
     date: new Date().toLocaleString('pt-BR')
   };
@@ -517,8 +556,10 @@ function showPassScreen() {
 /* ── CARD SCREEN ── */
 function goToCard() {
   cardFlipped = false;
-  const r = currentRound, idx = cardIdx, isImp = idx === r.impostorIdx;
+  const r = currentRound, idx = cardIdx;
+  const isImp = r.impostorIdxs.includes(idx);
   const isLast = idx === r.players.length - 1;
+  const totalImpostors = r.impostorIdxs.length;
 
   document.getElementById('cardName').textContent = r.players[idx];
   document.getElementById('cardInner').classList.remove('flipped');
@@ -526,12 +567,21 @@ function goToCard() {
 
   const front = document.getElementById('cardFront');
   if (isImp) {
+    const showHint = r.hintEnabled;
+    const impNum = totalImpostors > 1
+      ? `<div class="card-impostor-num">Há ${totalImpostors} impostores nesta rodada</div>`
+      : '';
     front.className = 'card-face card-front-impostor';
     front.innerHTML = `
       <div class="card-icon">🔴</div>
       <div class="card-role role-impostor">IMPOSTOR</div>
-      <div class="card-word-label" style="margin-top:.75rem">Sua dica</div>
-      <div class="card-word impostor-hint">${r.hint}</div>`;
+      ${impNum}
+      ${showHint
+        ? `<div class="card-word-label" style="margin-top:.75rem">Sua dica</div>
+           <div class="card-word impostor-hint">${r.hint}</div>`
+        : `<div class="card-word-label" style="margin-top:.75rem;color:var(--accent2)">Sem dica nesta rodada</div>
+           <div style="font-size:.8rem;color:var(--muted);text-align:center;margin-top:.5rem">Descubra a palavra ouvindo os outros jogadores</div>`
+      }`;
   } else {
     front.className = 'card-face card-front-player';
     front.innerHTML = `
@@ -541,7 +591,6 @@ function goToCard() {
       <div class="card-word player-word">${r.word}</div>`;
   }
 
-  // Último jogador: botão leva direto ao resumo (sem tela de passagem)
   const btn = document.getElementById('memorizedBtn');
   btn.classList.remove('visible');
   btn.textContent = isLast ? 'Memorizado — finalizar rodada' : 'Memorizei — passar o celular';
@@ -578,15 +627,21 @@ function goToSummary() {
 function renderSummary() {
   const r = currentRound;
   document.getElementById('leaderView').innerHTML = r.players.map((name, i) => {
-    const isImp = i === r.impostorIdx;
+    const isImp = r.impostorIdxs.includes(i);
     return `<div class="leader-row">
       <div class="player-num">${i + 1}</div>
       <div style="flex:1;font-size:.85rem">${name}</div>
       <span class="lbadge ${isImp ? 'lbadge-i' : 'lbadge-p'}">${isImp ? 'IMPOSTOR' : 'JOGADOR'}</span>
-      <span class="lword">${isImp ? '(dica)' : r.word}</span>
+      <span class="lword">${isImp ? (r.hintEnabled ? r.hint : 'sem dica') : r.word}</span>
     </div>`;
   }).join('');
-  document.getElementById('hintFull').textContent = r.hint;
+  const hintBox = document.getElementById('hintBox');
+  if (r.hintEnabled) {
+    hintBox.style.display = '';
+    document.getElementById('hintFull').textContent = r.hint;
+  } else {
+    hintBox.style.display = 'none';
+  }
 }
 
 /* ── HISTORY ── */
@@ -603,7 +658,7 @@ function renderHistory() {
         <div class="hist-date">${r.date}</div>
       </div>
       <div class="hist-detail">
-        Palavra: <strong>${r.word}</strong> · Impostor: <strong>${r.players[r.impostorIdx]}</strong> · ${r.players.length} jogadores
+        Palavra: <strong>${r.word}</strong> · Impostor(es): <strong>${(r.impostorIdxs||[r.impostorIdx]).map(i=>r.players[i]).join(", ")}</strong> · ${r.players.length} jogadores
       </div>
     </div>`).join('');
 }
